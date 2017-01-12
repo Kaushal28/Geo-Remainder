@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Geo Reminder</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">This is FUCKING Fragment.</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>

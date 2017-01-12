@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/app_bar0"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/app_bar0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:id="@+id/ll1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/newEvent"
+                android:maxLines="1"
+                android:text=""
+                android:ems="20"
+                android:hint="Task Title" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_layout">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desc"
+                android:text=""
+                android:maxLines="1"
+                android:ems="20"
+                android:hint="Description" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/linear1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_action_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Location:"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stateListAnimator="@null"
+                    android:translationZ="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:id="@+id/pickerButton"
+                    android:layout_marginLeft="45dp"
+                    android:elevation="5dp"
+                    android:src="@drawable/ic_action_place"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/linear5"
+                android:layout_below="@+id/linear1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your Location Will Appear Here"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/textView4" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/linear5"
+                android:id="@+id/linear2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_action_radius"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Radius:"
+                    android:textStyle="bold"
+                    android:id="@+id/textv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekValue"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/linear2"
+                android:layout_marginTop="15dp"
+                android:id="@+id/linear3"
+                android:weightSum="1">
+
+
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_weight="0.03">
+                </SeekBar>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/linear4"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/linear3">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_action_time"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Track Everytime:"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/compatSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:visibility="gone"
+             android:layout_below="@+id/linear4"
+             android:id="@+id/notEverytime">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:id="@+id/linear6">
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:src="@drawable/date"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Selected Dates:"
+                     android:textStyle="bold"
+                     android:id="@+id/selectedDates"
+                     android:layout_marginTop="5dp"
+                     android:layout_marginLeft="10dp"/>
+
+                 <View
+                     android:layout_width="0dp"
+                     android:layout_height="0dp"
+                     android:layout_weight="1"
+                     />
+                 <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerDate"/>
+
+             </LinearLayout>
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text=""
+                 android:id="@+id/invisibletv"
+                 android:visibility="invisible"
+                 android:layout_alignParentBottom="true"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/linear7"
+                 android:layout_below="@+id/linear6"
+                 android:layout_alignParentStart="true">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="15/07/2015"
+                     android:textStyle="bold"
+                     android:id="@+id/fromDate"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="50dp"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="to"
+                     android:enabled="false"
+                     android:textStyle="bold"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="40dp"
+                     android:gravity="center"
+                     android:id="@+id/to"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="10/2/2016"
+                     android:textStyle="bold"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="40dp"
+                     android:gravity="center"
+                     android:id="@+id/dateTo" />
+             </LinearLayout>
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:id="@+id/linear8"
+                 android:layout_marginTop="25dp"
+                 android:layout_below="@+id/linear7">
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:src="@drawable/time"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Occur each day at:"
+                     android:textStyle="bold"
+                     android:id="@+id/Occurseachdayat"
+                     android:layout_marginTop="5dp"
+                     android:layout_marginLeft="10dp"/>
+
+                 <View
+                     android:layout_width="0dp"
+                     android:layout_height="0dp"
+                     android:layout_weight="1"
+                     />
+
+                 <android.support.v7.widget.AppCompatSpinner
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/spinnerTime"/>
+
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/linear9"
+                 android:layout_below="@+id/linear8">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="00:00"
+                     android:textStyle="bold"
+                     android:id="@+id/fromTime"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="50dp"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="to"
+                     android:enabled="false"
+                     android:textStyle="bold"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="40dp"
+                     android:id="@+id/toTime"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="23:59"
+                     android:textStyle="bold"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginLeft="40dp"
+                     android:id="@+id/timeTo" />
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:id="@+id/linear10"
+                 android:layout_marginTop="15dp"
+                 android:layout_below="@+id/linear9">
+
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:src="@drawable/day"/>
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="On days:"
+                     android:textStyle="bold"
+                     android:id="@+id/daysText"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginTop="5dp"
+                     />
+
+                 <View
+                     android:layout_width="0dp"
+                     android:layout_height="0dp"
+                     android:layout_weight="1"
+                     />
+
+                 <android.support.v7.widget.AppCompatSpinner
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/spinnerDays"/>
+
+             </LinearLayout>
+
+
+         </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

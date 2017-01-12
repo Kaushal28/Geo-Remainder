@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.kaushal28.material1.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/viewAll"
+        android:title="View All Tasks"
+        android:orderInCategory="100"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_all"
+        />
+
+
+    <item
+        android:id="@+id/nevigate"
+        android:title="Create New Task"
+        android:orderInCategory="200"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="always"
+        android:icon="@drawable/plus"
+        />
+</menu>
